@@ -39,12 +39,13 @@
 
 		// We don't include Aloha's patched jquery by default, the user
 		// should do it himself.
-		"jquery": "empty:",
-    	//"jquery": 'vendor/jquery-1.7.2',
+		// "jquery": "empty:",
+    "jquery": 'vendor/jquery-existing',
 
 		// We do include Aloha's patched jquery-ui by default, but the
 		// user can override it if he is adventurous.
-		"jqueryui": 'vendor/jquery-ui-1.9m6',
+    "jqueryui": 'vendor/jquery-ui-existing',
+    // "jqueryui": 'vendor/jquery-ui-1.9m6',
 
 		// For the repository browser
 		'PubSub': 'vendor/pubsub/js/pubsub-unminified',
@@ -206,6 +207,10 @@
 		"listenforcer/css": "../plugins/extra/listenforcer/css",
 		"listenforcer/nls": "../plugins/extra/listenforcer/nls",
 		"listenforcer/res": "../plugins/extra/listenforcer/res",
+
+    // shortcuts for Populr.me plugins
+    "linebreaks": "../plugins/populr/linebreaks/lib",
+
     },
 
     //Configure CommonJS packages. See http://requirejs.org/docs/api.html#packages
@@ -416,33 +421,36 @@
 				// all common plugins
 				"ui/ui-plugin",
 				"link/link-plugin",
-				"table/table-plugin",
+				// "table/table-plugin",
 				"format/format-plugin",
 				"list/list-plugin",
-				"image/image-plugin",
-				"highlighteditables/highlighteditables-plugin",
+				// "image/image-plugin",
+				// "highlighteditables/highlighteditables-plugin",
 				"dom-to-xhtml/dom-to-xhtml-plugin",
 				"contenthandler/contenthandler-plugin",
 				"characterpicker/characterpicker-plugin",
 				"commands/commands-plugin",
 				"block/block-plugin",
 				"align/align-plugin",
-				"abbr/abbr-plugin",
-				"horizontalruler/horizontalruler-plugin",
+				// "abbr/abbr-plugin",
+				// "horizontalruler/horizontalruler-plugin",
 				"paste/paste-plugin",
-				// some extra plugins
-				'toc/toc-plugin',
-				'cite/cite-plugin',
-				'flag-icons/flag-icons-plugin',
-				'numerated-headers/numerated-headers-plugin',
-				'formatlesspaste/formatlesspaste-plugin',
-				'linkbrowser/linkbrowser-plugin',
-				'imagebrowser/imagebrowser-plugin',
-				'ribbon/ribbon-plugin',
-				'wai-lang/wai-lang-plugin',
-				'headerids/headerids-plugin',
-				'metaview/metaview-plugin',
-				'listenforcer/listenforcer-plugin',
+        // populr specific
+        "formatlesspaste/formatlesspaste-plugin",
+        "linebreaks/linebreaks-plugin",
+				// // some extra plugins
+				// 'toc/toc-plugin',
+				// 'cite/cite-plugin',
+				// 'flag-icons/flag-icons-plugin',
+				// 'numerated-headers/numerated-headers-plugin',
+				// 'formatlesspaste/formatlesspaste-plugin',
+				// 'linkbrowser/linkbrowser-plugin',
+				// 'imagebrowser/imagebrowser-plugin',
+				// 'ribbon/ribbon-plugin',
+				// 'wai-lang/wai-lang-plugin',
+				// 'headerids/headerids-plugin',
+				// 'metaview/metaview-plugin',
+				// 'listenforcer/listenforcer-plugin',
 			],
         },
 
