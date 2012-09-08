@@ -39,12 +39,13 @@
 
 		// We don't include Aloha's patched jquery by default, the user
 		// should do it himself.
-		// "jquery": "empty:",
-    "jquery": 'vendor/jquery-existing',
+		"jquery": "empty:",
+    // "jquery": 'vendor/jquery-existing',
 
 		// We do include Aloha's patched jquery-ui by default, but the
 		// user can override it if he is adventurous.
-    "jqueryui": 'vendor/jquery-ui-existing',
+    "jqueryui": "empty:",
+    // "jqueryui": 'vendor/jquery-ui-existing',
     // "jqueryui": 'vendor/jquery-ui-1.9m6',
 
 		// For the repository browser
