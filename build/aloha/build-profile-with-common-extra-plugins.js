@@ -208,10 +208,6 @@
 		"listenforcer/css": "../plugins/extra/listenforcer/css",
 		"listenforcer/nls": "../plugins/extra/listenforcer/nls",
 		"listenforcer/res": "../plugins/extra/listenforcer/res",
-
-    // shortcuts for Populr.me plugins
-    "linebreaks": "../plugins/populr/linebreaks/lib",
-
     },
 
     //Configure CommonJS packages. See http://requirejs.org/docs/api.html#packages
@@ -427,9 +423,9 @@
 				"list/list-plugin",
 				// "image/image-plugin",
 				// "highlighteditables/highlighteditables-plugin",
-				"dom-to-xhtml/dom-to-xhtml-plugin",
+				// "dom-to-xhtml/dom-to-xhtml-plugin",
 				"contenthandler/contenthandler-plugin",
-				"characterpicker/characterpicker-plugin",
+				// "characterpicker/characterpicker-plugin",
 				"commands/commands-plugin",
 				"block/block-plugin",
 				"align/align-plugin",
@@ -438,7 +434,6 @@
 				"paste/paste-plugin",
         // populr specific
         "formatlesspaste/formatlesspaste-plugin",
-        "linebreaks/linebreaks-plugin",
 				// // some extra plugins
 				// 'toc/toc-plugin',
 				// 'cite/cite-plugin',
