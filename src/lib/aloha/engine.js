@@ -7885,7 +7885,7 @@ commands.insertlinebreak = {
 //@{
 commands.insertorderedlist = {
 	// "Toggle lists with tag name "ol"."
-	action: function() { toggleLists("ol") },
+	action: function(value, range) { toggleLists("ol", range) },
 	// "True if the selection's list state is "mixed" or "mixed ol", false
 	// otherwise."
 	indeterm: function() { return /^mixed( ol)?$/.test(getSelectionListState()) },
@@ -8387,7 +8387,7 @@ commands.inserttext = {
 //@{
 commands.insertunorderedlist = {
 	// "Toggle lists with tag name "ul"."
-	action: function() { toggleLists("ul") },
+	action: function(value, range) { toggleLists("ul", range) },
 	// "True if the selection's list state is "mixed" or "mixed ul", false
 	// otherwise."
 	indeterm: function() { return /^mixed( ul)?$/.test(getSelectionListState()) },
