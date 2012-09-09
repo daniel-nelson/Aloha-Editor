@@ -434,7 +434,6 @@
 				"undo/undo-plugin",
 				"paste/paste-plugin",
         "formatlesspaste/formatlesspaste-plugin",
-        "populr/linebreaks/linebreaks-plugin",
 			],
         },
 

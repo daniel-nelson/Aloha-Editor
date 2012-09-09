@@ -432,7 +432,6 @@
 				// "abbr/abbr-plugin",
 				// "horizontalruler/horizontalruler-plugin",
 				"paste/paste-plugin",
-        // populr specific
         "formatlesspaste/formatlesspaste-plugin",
 				// // some extra plugins
 				// 'toc/toc-plugin',
