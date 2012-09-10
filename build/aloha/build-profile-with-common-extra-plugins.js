@@ -416,11 +416,11 @@
 
 			include: [
 				// all common plugins
-				"ui/ui-plugin",
-				"link/link-plugin",
+				// "ui/ui-plugin",
+				// "link/link-plugin",
 				// "table/table-plugin",
-				"format/format-plugin",
-				"list/list-plugin",
+				// "format/format-plugin",
+				// "list/list-plugin",
 				// "image/image-plugin",
 				// "highlighteditables/highlighteditables-plugin",
 				// "dom-to-xhtml/dom-to-xhtml-plugin",
@@ -428,11 +428,11 @@
 				// "characterpicker/characterpicker-plugin",
 				"commands/commands-plugin",
 				"block/block-plugin",
-				"align/align-plugin",
+				// "align/align-plugin",
 				// "abbr/abbr-plugin",
 				// "horizontalruler/horizontalruler-plugin",
 				"paste/paste-plugin",
-        "formatlesspaste/formatlesspaste-plugin",
+        // "formatlesspaste/formatlesspaste-plugin",
 				// // some extra plugins
 				// 'toc/toc-plugin',
 				// 'cite/cite-plugin',
