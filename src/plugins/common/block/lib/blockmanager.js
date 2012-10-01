@@ -153,7 +153,7 @@ define([
 		 */
 		_registerEventHandlersForDeactivatingAlohaBlock: function() {
 			var that = this;
-			jQuery(document).bind('click', function(event) {
+			jQuery(parent.window.document).bind('click', function(event) {
 				if (Maps.isEmpty(that._highlightedBlocks)) {
 					return;
 				}

@@ -3589,17 +3589,14 @@ commands.bold = {
 		} else {
 			setSelectionValue("bold", "bold", range);
 		}
-	}, 
+	},
 	inlineCommandActivatedValues: ["bold", "600", "700", "800", "900"],
 	relevantCssProperty: "fontWeight",
 	equivalentValues: function(val1, val2) {
-		// "Either the two strings are equal, or one is "bold" and the other is
-		// "700", or one is "normal" and the other is "400"."
-		return val1 == val2
-			|| (val1 == "bold" && val2 == "700")
-			|| (val1 == "700" && val2 == "bold")
-			|| (val1 == "normal" && val2 == "400")
-			|| (val1 == "400" && val2 == "normal");
+    var boldValues = ["bold", "600", "700", "800", "900"];
+    var normalValues = ["normal", "500", "400", "300", "200", "100"];
+    return (boldValues.indexOf(val1) >= 0 && boldValues.indexOf(val2) >= 0) ||
+		       (normalValues.indexOf(val1) >= 0 && normalValues.indexOf(val2) >= 0)
 	}
 };
 
