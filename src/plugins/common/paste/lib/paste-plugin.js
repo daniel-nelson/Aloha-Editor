@@ -79,6 +79,7 @@ function ( Aloha, Plugin, jQuery, Commands, console ) {
 		newRange.setEnd($pasteDiv.get( 0 ), 0);
 		Aloha.getSelection().addRange(newRange);
 
+		$(document).find('body').append($pasteDiv);
 		$pasteDiv.focus();
 	};
 
