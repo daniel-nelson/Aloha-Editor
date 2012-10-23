@@ -6448,12 +6448,10 @@ function justifySelection(alignment, range) {
 	var elementList = getAllContainedNodes(newRange, function(node) {
 		return node.nodeType == $_.Node.ELEMENT_NODE
 			&& isEditable(node)
-			// Ignoring namespaces here
-			&& (
-				hasAttribute(node, "align")
-				|| node.style.textAlign != ""
-				|| isNamedHtmlElement(node, 'center')
-			);
+      && ($(node).hasClass("text-align-left") ||
+                $(node).hasClass("text-align-right") ||
+                $(node).hasClass("text-align-center") ||
+                $(node).hasClass("text-align-justify") );
 	});
 
 	// "For each element in element list:"
@@ -6464,12 +6462,13 @@ function justifySelection(alignment, range) {
 		// is "align", remove that attribute."
 		element.removeAttribute("align");
 
-		// "Unset the CSS property "text-align" on element, if it's set by a
-		// style attribute."
-		element.style.textAlign = "";
-		if (element.getAttribute("style") == "") {
-			element.removeAttribute("style");
-		}
+    // "Remove the aligment class. Remove the class attribute if it is blank."
+    $(element).removeClass("text-align-left");
+        $(element).removeClass("text-align-right");
+        $(element).removeClass("text-align-center");
+        $(element).removeClass("text-align-justify");
+    if (element.getAttribute("class") == "") {
+      element.removeAttribute("class");
 
 		// "If element is a div or span or center with no attributes, remove
 		// it, preserving its descendants."
@@ -6535,13 +6534,12 @@ function justifySelection(alignment, range) {
 			function(node) {
 				return isNamedHtmlElement(node, 'div')
 					&& $_(node.attributes).every(function(attr) {
-						return (attr.name == "align" && attr.value.toLowerCase() == alignment)
-							|| (attr.name == "style" && getStyleLength(node) == 1 && node.style.textAlign == alignment);
+						return (attr.name == "class" && node.class == "text-align-" + alignment);
 					});
 			},
 			function() {
 				var newParent = document.createElement("div");
-				newParent.setAttribute("style", "text-align: " + alignment);
+				newParent.setAttribute("class", "text-align-" + alignment);
 				return newParent;
 			},
 			range
