@@ -301,10 +301,12 @@ function ( jQuery, PluginManager ) {
 		 */
 		getEditableById: function (id) {
 
-			// if the element is a textarea than route to the editable div
-			if (jQuery('#'+id).get(0).nodeName.toLowerCase() === 'textarea' ) {
-				id = id + '-aloha';
-			}
+      // This was throwing an error [dwn]
+			// if the element is a textarea then route to the editable div
+			// if (jQuery('#'+id).get(0).nodeName.toLowerCase() === 'textarea' ) {
+				// id = id + '-aloha';
+			// }
+      // end:This was throwing an error [dwn]
 
 			// serach all editables for id
 			for (var i = 0, editablesLength = Aloha.editables.length; i < editablesLength; i++) {
