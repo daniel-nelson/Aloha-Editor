@@ -152,7 +152,7 @@ define([
 	/**
 	 * jQuery destroy elements as editable
 	 *
-	 * destroy all mached elements editable capabilities
+	 * destroy all matched elements editable capabilities
 	 * @return	jQuery object for the matched elements
 	 * @api
 	 */
